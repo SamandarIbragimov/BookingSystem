@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'http://localhost:5059' // to be set when deployed
+  apiBaseUrl: 'https://bookingsystem-ci6c.onrender.com/' // to be set when deployed
 };
