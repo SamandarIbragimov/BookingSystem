@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd frontend
+          cd booking-frontend
           npm install
 
       - name: Build Angular app
