@@ -3,7 +3,7 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main  # or 'master' depending on your branch
+      - main
 
 jobs:
   build-and-deploy:
@@ -28,8 +28,11 @@ jobs:
           cd booking-frontend
           npm run build -- --configuration production
 
+      - name: Disable Jekyll
+        run: echo "" > booking-frontend/dist/booking-frontend/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # target branch for deployment
-          folder: booking-frontend/dist/booking-frontend  # output folder
+          branch: gh-pages
+          folder: booking-frontend/dist/booking-frontend
