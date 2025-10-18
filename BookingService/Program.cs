@@ -6,7 +6,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Register in-memory repository
 builder.Services.AddSingleton<IRoomRepository, InMemoryRoomRepository>();
 
 // Allow Angular dev server + GitHub Pages origin; for local keep open
